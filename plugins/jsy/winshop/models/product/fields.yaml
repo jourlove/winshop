@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    jan:
+        label: JAN
+        type: number
+    name:
+        label: 商品名称
+        type: text
+    desp:
+        label: 商品详细
+        type: textarea
+        size: large
+    amount:
+        label: 数量
+        type: number
+    

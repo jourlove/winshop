@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Product
+
+# Model Form Field configuration
+form: $/jsy/winshop/models/product/fields.yaml
+
+# Model Class name
+modelClass: Jsy\WinShop\Models\Product
+
+# Default redirect location
+defaultRedirect: jsy/winshop/products
+
+# Create page
+create:
+    title: Create Product
+    redirect: jsy/winshop/products/update/:id
+    redirectClose: jsy/winshop/products
+
+# Update page
+update:
+    title: Edit Product
+    redirect: jsy/winshop/products
+    redirectClose: jsy/winshop/products
+
+# Preview page
+preview:
+    title: Preview Product
