@@ -42,6 +42,7 @@ class Products extends Controller
             'query' => [
                 'appid' => 'dj0zaiZpPTdxQmNNT3JyemtmMyZzPWNvbnN1bWVyc2VjcmV0Jng9OGM-',
                 'jan' => input('jan'),
+                'hits' => 1,
             ]
         ]);
         $res_arr = json_decode( $res->getBody(), true);
