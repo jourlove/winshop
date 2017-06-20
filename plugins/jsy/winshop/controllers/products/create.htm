@@ -23,7 +23,6 @@
                             success: function(data) {
                                 $('#Form-field-Product-name').val(data['Name']);
                                 $('#Form-field-Product-description').val(data['Description']);
-                                $('#Form-field-Product-image_path').val(data['Image']['Medium']);
                                 $('#Form-field-Product-price').val(data['Price']['_value']);
                             }
                         }
@@ -32,8 +31,8 @@
             $(document).ready(function() {
                 $(window).keydown(function(event){
                     if(event.keyCode == 13) {
-                    event.preventDefault();
-                    return false;
+                        event.preventDefault();
+                        return false;
                     }
                 });
             });
