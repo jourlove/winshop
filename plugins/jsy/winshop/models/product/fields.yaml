@@ -43,6 +43,12 @@ fields:
         type: number
         span: right
         required: true
+    image_yahoo_url:
+        type: text
+        cssClass: hidden        
+    image_yahoo:
+        type: partial
+        path: $/jsy/winshop/models/product/_image_yahoo_field.htm        
     photos:
         label: 图片
         type: fileupload

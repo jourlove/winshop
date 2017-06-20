@@ -36,7 +36,7 @@ return [
     |
     */
 
-    'backendUri' => 'backend',
+    'backendUri' => 'admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -84,7 +84,8 @@ return [
     |
     */
 
-    'loadModules' => ['System', 'Backend', 'Cms'],
+    //'loadModules' => ['System', 'Backend', 'Cms'],
+    'loadModules' => ['System', 'Backend'],
 
     /*
     |--------------------------------------------------------------------------

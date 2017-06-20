@@ -19,7 +19,7 @@ class Plugin extends PluginBase
             'name'        => 'WinShop',
             'description' => 'No description provided yet...',
             'author'      => 'Jsy',
-            'icon'        => 'icon-leaf'
+            'icon'        => 'icon-shopping-basket'
         ];
     }
 
@@ -86,7 +86,7 @@ class Plugin extends PluginBase
             'winshop' => [
                 'label'       => 'WinShop',
                 'url'         => Backend::url('jsy/winshop/products'),
-                'icon'        => 'icon-leaf',
+                'icon'        => 'icon-shopping-basket',
                 'permissions' => ['jsy.winshop.*'],
                 'order'       => 500,
             ],

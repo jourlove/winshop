@@ -24,6 +24,8 @@
                                 $('#Form-field-Product-name').val(data['Name']);
                                 $('#Form-field-Product-description').val(data['Description']);
                                 $('#Form-field-Product-price').val(data['Price']['_value']);
+                                $('#Form-field-Product-image_yahoo_url').val(data['Image']['Medium']);
+                                $('#image_yahoo').attr('src',data['Image']['Medium']);      
                             }
                         }
                     )
