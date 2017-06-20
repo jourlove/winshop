@@ -3,6 +3,7 @@
 use BackendMenu;
 use Backend\Classes\Controller;
 use GuzzleHttp\Client;
+use Validator;
 
 /**
  * Products Back-end Controller
@@ -27,6 +28,15 @@ class Products extends Controller
 
     public function onProductGet()
     {
+
+        $v = Validator::make(input(), array(
+            'jan' => 'required|numeric',
+        ));
+
+        if ($v->fails()) {
+            return ['Name' => "", 'Description' => ""];
+        }
+
         $client = new Client();
         $res = $client->request('GET', 'http://shopping.yahooapis.jp/ShoppingWebService/V1/json/itemSearch', [
             'query' => [

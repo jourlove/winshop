@@ -6,14 +6,49 @@ fields:
     jan:
         label: JAN
         type: number
-    name:
-        label: 商品名称
-        type: text
-    desp:
-        label: 商品详细
-        type: textarea
-        size: large
+        span: left
+        required: true
     amount:
         label: 数量
         type: number
+        required: true        
+        span: right
+    name:
+        label: 商品名称
+        type: text
+        span: left
+        required: true
+    name_cn:
+        label: 商品名称(中文)
+        type: text
+        span: right
+    description:
+        label: 商品详细
+        type: textarea
+        size: small
+        required: true        
+        span: left
+    description_cn:
+        label: 商品详细(中文)
+        type: textarea
+        size: small
+        span: right        
+    price:
+        label: 单价(日元)
+        type: number
+        span: left
+        required: true        
+    price_cn:
+        label: 单价(人民币)
+        type: number
+        span: right
+        required: true        
+    image_path:
+        label: 图片地址
+        type: text
+        cssClass: hidden
+    image:
+        type: partial
+        path: $/jsy/winshop/models/product/_image.htm
+    
     

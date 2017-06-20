@@ -6,3 +6,19 @@ columns:
     id:
         label: ID
         searchable: true
+    name:
+        label: 商品名称
+        searchable: true
+        type: text
+    price:
+        label: 商品价格(日元)
+        searchable: true
+        type: text
+    price_cn:
+        label: 商品价格(人民币)
+        searchable: true
+        type: text
+    amount:
+        label: 数量
+        searchable: true
+        type: text

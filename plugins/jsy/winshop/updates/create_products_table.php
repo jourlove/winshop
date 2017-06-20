@@ -12,6 +12,14 @@ class CreateProductsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('jan');
+            $table->string('name');
+            $table->string('name_cn');
+            $table->string('description');
+            $table->string('description_cn');
+            $table->string('image_path');
+            $table->float('price');
+            $table->float('price_cn');
+            $table->integer('amount');
             $table->timestamps();
         });
     }

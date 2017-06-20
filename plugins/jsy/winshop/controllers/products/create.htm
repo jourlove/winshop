@@ -12,7 +12,33 @@
         <div class="layout-row">
             <?= $this->formRender() ?>
         </div>
-
+        <script>
+            $('#Form-field-Product-jan')
+                .focusin(function(e) {
+                    $(this).css('background-color', '#ffc');
+                })
+                .focusout(function(e) {
+                    $('form').request('onProductGet', {
+                            data: {jan: $('#Form-field-Product-jan').val()},
+                            success: function(data) {
+                                $('#Form-field-Product-name').val(data['Name']);
+                                $('#Form-field-Product-description').val(data['Description']);
+                                $('#Form-field-Product-image_path').val(data['Image']['Medium']);
+                                $('#Form-field-Product-price').val(data['Price']['_value']);
+                                $('#image_jsy').attr('src',data['Image']['Medium']);
+                            }
+                        }
+                    )
+                });
+            $(document).ready(function() {
+                $(window).keydown(function(event){
+                    if(event.keyCode == 13) {
+                    event.preventDefault();
+                    return false;
+                    }
+                });
+            });
+        </script>
         <div class="form-buttons">
             <div class="loading-indicator-container">
                 <button

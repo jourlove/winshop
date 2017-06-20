@@ -10,25 +10,8 @@
     <?= Form::open(['class' => 'layout']) ?>
 
         <div class="layout-row">
-            <?= $this->formRender() ?>
-           
+            <?= $this->formRender() ?>           
         </div>
-        <script>
-            $('#Form-field-Product-jan')
-                .focusin(function(e) {
-                    $(this).css('background-color', '#ffc');
-                })
-                .focusout(function(e) {
-                    $('form').request('onProductGet', {
-                            data: {jan: $('#Form-field-Product-jan').val()},
-                            success: function(data) {
-                                $('#Form-field-Product-name').val(data['Name']);
-                                $('#Form-field-Product-desp').val(data['Description']);
-                            }
-                        }
-                    )
-                });
-        </script>
         <div class="form-buttons">
             <div class="loading-indicator-container">
                 <button
