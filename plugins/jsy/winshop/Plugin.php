@@ -89,6 +89,30 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-shopping-basket',
                 'permissions' => ['jsy.winshop.*'],
                 'order'       => 500,
+                
+                'sideMenu' => [
+                    'new_product' => [
+                        'label'       => '添加商品',
+                        'icon'        => 'icon-plus',
+                        'url'         => Backend::url('jsy/winshop/products/create'),
+                    ],
+                    'new_order' => [
+                        'label'       => '添加订单',
+                        'icon'        => 'icon-plus',
+                        'url'         => Backend::url('jsy/winshop/products/create'),
+                    ],
+                    'products' => [
+                        'label'       => '商品一览',
+                        'icon'        => 'icon-list-ul',
+                        'url'         => Backend::url('jsy/winshop/products'),
+                    ],
+                    'orders' => [
+                        'label'       => '订单一览',
+                        'icon'        => 'icon-list-ul',
+                        'url'         => Backend::url('jsy/winshop/products'),
+                    ]
+                ]
+
             ],
         ];
     }
