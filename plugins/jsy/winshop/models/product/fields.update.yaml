@@ -8,6 +8,7 @@ fields:
         type: number
         span: left
         required: true
+        readOnly: true
     amount:
         label: 数量
         type: number
@@ -42,7 +43,7 @@ fields:
         label: 单价(人民币)
         type: number
         span: right
-        required: true
+        required: true        
     photos:
         label: 图片
         type: fileupload

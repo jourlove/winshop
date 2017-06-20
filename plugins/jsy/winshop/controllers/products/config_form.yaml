@@ -23,6 +23,7 @@ create:
 # Update page
 update:
     title: Edit Product
+    form: $/jsy/winshop/models/product/fields.update.yaml
     redirect: jsy/winshop/products
     redirectClose: jsy/winshop/products
 

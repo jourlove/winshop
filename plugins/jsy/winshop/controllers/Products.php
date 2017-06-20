@@ -49,4 +49,6 @@ class Products extends Controller
         $product = $res_arr['ResultSet'][0]['Result'][0];
         return $product;
     }
+
+
 }

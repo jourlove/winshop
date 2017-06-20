@@ -33,5 +33,5 @@ class Product extends Model
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [];
-    public $attachMany = [];
+    public $attachMany = ['photos' => 'System\Models\File'];
 }
