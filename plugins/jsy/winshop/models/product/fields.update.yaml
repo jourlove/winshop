@@ -43,7 +43,11 @@ fields:
         label: 单价(人民币)
         type: number
         span: right
-        required: true        
+        required: true
+    weight:
+        label: 重量
+        type: number
+        required: true                
     photos:
         label: 图片
         type: fileupload

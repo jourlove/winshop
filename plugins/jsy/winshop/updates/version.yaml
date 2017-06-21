@@ -1,3 +1,6 @@
 1.0.1: 
   - First version of WinShop
   - create_products_table.php
+1.0.2:
+  - create order table
+  - create_orders_table.php

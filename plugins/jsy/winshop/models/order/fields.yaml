@@ -1,0 +1,47 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    code:
+        label: 快递单号
+        type: text
+        span: left
+        required: true
+    user:
+        label: 用户
+        type: recordfinder
+        list: $/rainlab/user/models/user/columns.yaml
+        prompt: Click the %s button to find a user
+        nameFrom: name
+        required: true        
+        span: right
+    total_weight:
+        label: 总重量
+        type: number
+        span: left
+        required: true
+    total_price:
+        label: 总价格
+        type: number
+        span: right
+        required: true
+    products:
+        type: repeater
+        prompt: 添加商品
+        form:
+            fields:
+                product_id:
+                    label: 商品ID
+                    type: text
+                    required: true
+                    span: left        
+                product:
+                    label: 商品名称
+                    type: text
+                    required: true        
+                    span: right
+                amount:
+                    label: 数量
+                    type: text
+                    required: true        

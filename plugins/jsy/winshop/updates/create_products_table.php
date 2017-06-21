@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->float('price');
             $table->float('price_cn');
             $table->integer('amount');
+            $table->integer('weight');
             $table->string('image_yahoo_url');            
             $table->timestamps();
         });

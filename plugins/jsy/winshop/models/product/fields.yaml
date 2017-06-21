@@ -43,6 +43,10 @@ fields:
         type: number
         span: right
         required: true
+    weight:
+        label: 重量
+        type: number
+        required: true
     image_yahoo_url:
         type: text
         cssClass: hidden        

@@ -1,0 +1,22 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+user:
+    label: 用户一览
+    view:
+        list: $/rainlab/user/models/user/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/rainlab/user/models/user/fields.yaml
+        recordsPerPage: 10
+
+product:
+    label: 商品一览
+    view:
+        list: $/jsy/winshop/models/product/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/jsy/winshop/models/product/fields.yaml
+        recordsPerPage: 10
+        

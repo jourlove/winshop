@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Order
+
+# Model Form Field configuration
+form: $/jsy/winshop/models/order/fields.yaml
+
+# Model Class name
+modelClass: Jsy\WinShop\Models\Order
+
+# Default redirect location
+defaultRedirect: jsy/winshop/orders
+
+# Create page
+create:
+    title: Create Order
+    redirect: jsy/winshop/orders/update/:id
+    redirectClose: jsy/winshop/orders
+
+# Update page
+update:
+    title: Edit Order
+    redirect: jsy/winshop/orders
+    redirectClose: jsy/winshop/orders
+
+# Preview page
+preview:
+    title: Preview Order

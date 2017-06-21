@@ -99,7 +99,7 @@ class Plugin extends PluginBase
                     'new_order' => [
                         'label'       => '添加订单',
                         'icon'        => 'icon-plus',
-                        'url'         => Backend::url('jsy/winshop/products/create'),
+                        'url'         => Backend::url('jsy/winshop/orders/create'),
                     ],
                     'products' => [
                         'label'       => '商品一览',
