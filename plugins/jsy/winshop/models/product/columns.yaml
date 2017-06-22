@@ -18,7 +18,6 @@ columns:
         label: 商品价格(人民币)
         searchable: true
         type: text
-    amount:
-        label: 数量
-        searchable: true
+    weight:
+        label: 重量
         type: text

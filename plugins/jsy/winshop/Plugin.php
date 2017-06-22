@@ -64,14 +64,11 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
-            'jsy.winshop.some_permission' => [
-                'tab' => 'WinShop',
-                'label' => 'Some permission'
-            ],
+            'jsy.winshop.access_orders' => ['tab' => 'jsy.winshop::lang.plugin.tab', 'label' => 'jsy.winshop::lang.plugin.access_orders'],
+            'jsy.winshop.access_products' => ['tab' => 'jsy.winshop::lang.plugin.tab', 'label' => 'jsy.winshop::lang.plugin.access_products'],
         ];
+
     }
 
     /**
@@ -108,7 +105,7 @@ class Plugin extends PluginBase
                 'label'       => 'Products',
                 'url'         => Backend::url('jsy/winshop/products'),
                 'icon'        => 'icon-bitbucket',
-                'permissions' => ['jsy.winshop.*'],
+                'permissions' => ['jsy.winshop.products'],
                 'order'       => 401,
                 
                 'sideMenu' => [

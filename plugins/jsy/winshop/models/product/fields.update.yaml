@@ -9,11 +9,6 @@ fields:
         span: left
         required: true
         readOnly: true
-    amount:
-        label: 数量
-        type: number
-        required: true        
-        span: right
     name:
         label: 商品名称
         type: text
