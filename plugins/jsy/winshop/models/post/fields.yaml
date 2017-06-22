@@ -3,6 +3,32 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    code:
+        label: 快递单号
+        type: text
+        span: left
+        required: true
+    total_weight:
+        label: 总重量
+        type: number
+        span: left
+        required: true
+    total_price:
+        label: 总价格
+        type: number
+        span: right
+        required: true
+    products:
+        type: repeater
+        prompt: 添加商品
+        form:
+            fields:
+                product_JAN:
+                    label: 商品JAN
+                    type: text
+                    span: left        
+                amount:
+                    label: 数量
+                    type: text
+                    span: right
+
