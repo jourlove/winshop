@@ -3,14 +3,14 @@
 use Model;
 
 /**
- * Address Model
+ * Warehouse Model
  */
-class Address extends Model
+class Warehouse extends Model
 {
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'jsy_winshop_addresses';
+    public $table = 'jsy_winshop_warehouses';
 
     /**
      * @var array Guarded fields
@@ -27,9 +27,7 @@ class Address extends Model
      */
     public $hasOne = [];
     public $hasMany = [];
-    public $belongsTo = [
-        'user' => 'Rainlab\User\Models\User'
-    ];
+    public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
