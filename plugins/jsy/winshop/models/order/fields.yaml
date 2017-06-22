@@ -31,17 +31,11 @@ fields:
         prompt: 添加商品
         form:
             fields:
-                product_id:
-                    label: 商品ID
+                product_JAN:
+                    label: 商品JAN
                     type: text
-                    required: true
                     span: left        
-                product:
-                    label: 商品名称
-                    type: text
-                    required: true        
-                    span: right
                 amount:
                     label: 数量
                     type: text
-                    required: true        
+                    span: right    

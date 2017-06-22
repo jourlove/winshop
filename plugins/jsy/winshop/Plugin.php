@@ -80,8 +80,8 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'jsy.winshop.access_orders' => ['tab' => 'jsy.winshop::lang.plugin.tab', 'label' => 'jsy.winshop::lang.plugin.access_orders'],
-            'jsy.winshop.access_products' => ['tab' => 'jsy.winshop::lang.plugin.tab', 'label' => 'jsy.winshop::lang.plugin.access_products'],
+            'jsy.winshop.access_orders' => ['tab' => 'jsy.winshop::lang.permission.tab', 'label' => 'jsy.winshop::lang.permission.access_orders'],
+            'jsy.winshop.access_all' => ['tab' => 'jsy.winshop::lang.permission.tab', 'label' => 'jsy.winshop::lang.permission.access_all'],
         ];
 
     }
@@ -99,7 +99,7 @@ class Plugin extends PluginBase
                 'label'       => 'jsy.winshop::lang.plugin.order',
                 'url'         => Backend::url('jsy/winshop/orders'),
                 'icon'        => 'icon-shopping-bag',
-                'permissions' => ['jsy.winshop.*'],
+                'permissions' => ['jsy.winshop.access_orders'],
                 'order'       => 400,
                 
                 'sideMenu' => [
@@ -120,7 +120,7 @@ class Plugin extends PluginBase
                 'label'       => 'jsy.winshop::lang.plugin.post',
                 'url'         => Backend::url('jsy/winshop/posts'),
                 'icon'        => 'icon-paper-plane',
-                'permissions' => ['jsy.winshop.*'],
+                'permissions' => ['jsy.winshop.access_all'],
                 'order'       => 401,
                 
                 'sideMenu' => [
@@ -141,7 +141,7 @@ class Plugin extends PluginBase
                 'label'       => 'jsy.winshop::lang.plugin.warehouse',
                 'url'         => Backend::url('jsy/winshop/warehouses'),
                 'icon'        => 'icon-cube',
-                'permissions' => ['jsy.winshop.*'],
+                'permissions' => ['jsy.winshop.access_all'],
                 'order'       => 402,
                 
                 'sideMenu' => [
@@ -162,7 +162,7 @@ class Plugin extends PluginBase
                 'label'       => 'jsy.winshop::lang.plugin.product',
                 'url'         => Backend::url('jsy/winshop/products'),
                 'icon'        => 'icon-bitbucket',
-                'permissions' => ['jsy.winshop.products'],
+                'permissions' => ['jsy.winshop.access_all'],
                 'order'       => 403,
                 
                 'sideMenu' => [

@@ -1,0 +1,14 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    title: Import Orders
+    modelClass: Jsy\WinShop\Models\Order
+    list: $/jsy/winshop/models/order/columns.yaml
+
+export:
+    title: Export Orders
+    modelClass: Jsy\WinShop\Models\Order
+    list: $/jsy/winshop/models/order/columns.yaml
+        
