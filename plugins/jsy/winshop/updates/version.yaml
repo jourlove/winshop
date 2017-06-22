@@ -5,3 +5,4 @@
   - create_warehouses_table.php
   - create_warehouse_logs_table.php
   - create_orders_table.php
+  - create_posts_table.php

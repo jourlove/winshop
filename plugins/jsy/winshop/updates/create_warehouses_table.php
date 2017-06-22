@@ -11,7 +11,7 @@ class CreateWarehousesTable extends Migration
         Schema::create('jsy_winshop_warehouses', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('product_id');
+            $table->integer('jan');
             $table->integer('amount');
             $table->timestamps();
         });

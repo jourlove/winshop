@@ -109,36 +109,36 @@ class Plugin extends PluginBase
                 'order'       => 401,
                 
                 'sideMenu' => [
-                    'new_order' => [
-                        'label'       => '添加订单',
+                    'new_post' => [
+                        'label'       => '添加邮单',
                         'icon'        => 'icon-plus',
-                        'url'         => Backend::url('jsy/winshop/orders/create'),
+                        'url'         => Backend::url('jsy/winshop/posts/create'),
                     ],
-                    'order_list' => [
-                        'label'       => '订单一览',
+                    'post_list' => [
+                        'label'       => '邮单一览',
                         'icon'        => 'icon-list-ul',
-                        'url'         => Backend::url('jsy/winshop/orders'),
+                        'url'         => Backend::url('jsy/winshop/posts'),
                     ]
                 ]
 
             ],
             'warehouse' => [
                 'label'       => 'jsy.winshop::lang.plugin.warehouse',
-                'url'         => Backend::url('jsy/winshop/posts'),
+                'url'         => Backend::url('jsy/winshop/warehouses'),
                 'icon'        => 'icon-cube',
                 'permissions' => ['jsy.winshop.*'],
                 'order'       => 402,
                 
                 'sideMenu' => [
-                    'new_order' => [
-                        'label'       => '添加订单',
+                    'new_warehouse' => [
+                        'label'       => '商品入库',
                         'icon'        => 'icon-plus',
-                        'url'         => Backend::url('jsy/winshop/orders/create'),
+                        'url'         => Backend::url('jsy/winshop/warehouses/create'),
                     ],
-                    'order_list' => [
-                        'label'       => '订单一览',
+                    'warehouse_list' => [
+                        'label'       => '入库一览',
                         'icon'        => 'icon-list-ul',
-                        'url'         => Backend::url('jsy/winshop/orders'),
+                        'url'         => Backend::url('jsy/winshop/warehouses'),
                     ]
                 ]
 

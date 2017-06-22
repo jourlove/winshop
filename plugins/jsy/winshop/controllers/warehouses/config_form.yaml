@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Warehouse
+
+# Model Form Field configuration
+form: $/jsy/winshop/models/warehouse/fields.yaml
+
+# Model Class name
+modelClass: Jsy\WinShop\Models\Warehouse
+
+# Default redirect location
+defaultRedirect: jsy/winshop/warehouses
+
+# Create page
+create:
+    title: Create Warehouse
+    redirect: jsy/winshop/warehouses/update/:id
+    redirectClose: jsy/winshop/warehouses
+
+# Update page
+update:
+    title: Edit Warehouse
+    redirect: jsy/winshop/warehouses
+    redirectClose: jsy/winshop/warehouses
+
+# Preview page
+preview:
+    title: Preview Warehouse

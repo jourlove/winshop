@@ -3,9 +3,6 @@
 # ===================================
 
 fields:
-    jan:
-        label: JAN
-        type: text
-    amount:
-        label: 数量
-        type: text
+    id:
+        label: ID
+        disabled: true

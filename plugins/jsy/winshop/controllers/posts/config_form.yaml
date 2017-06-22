@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post
+
+# Model Form Field configuration
+form: $/jsy/winshop/models/post/fields.yaml
+
+# Model Class name
+modelClass: Jsy\WinShop\Models\Post
+
+# Default redirect location
+defaultRedirect: jsy/winshop/posts
+
+# Create page
+create:
+    title: Create Post
+    redirect: jsy/winshop/posts/update/:id
+    redirectClose: jsy/winshop/posts
+
+# Update page
+update:
+    title: Edit Post
+    redirect: jsy/winshop/posts
+    redirectClose: jsy/winshop/posts
+
+# Preview page
+preview:
+    title: Preview Post

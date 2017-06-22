@@ -3,11 +3,6 @@
 # ===================================
 
 columns:
-    jan:
-        label: JAN
-        type: text
-        searchable: true
-    amount:
-        label: 数量
-        type: text
+    id:
+        label: ID
         searchable: true
