@@ -22,7 +22,7 @@ class Products extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Jsy.WinShop', 'winshop', 'products');
+        BackendMenu::setContext('Jsy.WinShop', 'product', 'product_list');
 
     }
 

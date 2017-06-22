@@ -22,6 +22,6 @@ class Orders extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Jsy.WinShop', 'winshop', 'orders');
+        BackendMenu::setContext('Jsy.WinShop', 'order', 'order_list');
     }
 }

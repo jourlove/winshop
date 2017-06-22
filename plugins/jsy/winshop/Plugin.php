@@ -83,12 +83,33 @@ class Plugin extends PluginBase
     {
 
         return [
-            'winshop' => [
+            'order' => [
                 'label'       => 'WinShop',
-                'url'         => Backend::url('jsy/winshop/products'),
-                'icon'        => 'icon-shopping-basket',
+                'url'         => Backend::url('jsy/winshop/orders'),
+                'icon'        => 'icon-shopping-bag',
                 'permissions' => ['jsy.winshop.*'],
-                'order'       => 500,
+                'order'       => 400,
+                
+                'sideMenu' => [
+                    'new_order' => [
+                        'label'       => '添加订单',
+                        'icon'        => 'icon-plus',
+                        'url'         => Backend::url('jsy/winshop/orders/create'),
+                    ],
+                    'order_list' => [
+                        'label'       => '订单一览',
+                        'icon'        => 'icon-list-ul',
+                        'url'         => Backend::url('jsy/winshop/orders'),
+                    ]
+                ]
+
+            ],
+            'product' => [
+                'label'       => 'Products',
+                'url'         => Backend::url('jsy/winshop/products'),
+                'icon'        => 'icon-bitbucket',
+                'permissions' => ['jsy.winshop.*'],
+                'order'       => 401,
                 
                 'sideMenu' => [
                     'new_product' => [
@@ -96,24 +117,15 @@ class Plugin extends PluginBase
                         'icon'        => 'icon-plus',
                         'url'         => Backend::url('jsy/winshop/products/create'),
                     ],
-                    'new_order' => [
-                        'label'       => '添加订单',
-                        'icon'        => 'icon-plus',
-                        'url'         => Backend::url('jsy/winshop/orders/create'),
-                    ],
-                    'products' => [
+                    'product_list' => [
                         'label'       => '商品一览',
                         'icon'        => 'icon-list-ul',
                         'url'         => Backend::url('jsy/winshop/products'),
                     ],
-                    'orders' => [
-                        'label'       => '订单一览',
-                        'icon'        => 'icon-list-ul',
-                        'url'         => Backend::url('jsy/winshop/products'),
-                    ]
                 ]
 
             ],
+
         ];
     }
 }
