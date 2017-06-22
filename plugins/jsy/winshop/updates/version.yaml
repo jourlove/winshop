@@ -1,7 +1,7 @@
 1.0.1: 
   - First version of WinShop
   - create_products_table.php
-  - create_addresses_table.php
+  - add_address_to_user.php
   - create_warehouses_table.php
   - create_warehouse_logs_table.php
   - create_orders_table.php

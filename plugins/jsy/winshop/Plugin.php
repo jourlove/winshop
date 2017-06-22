@@ -2,12 +2,17 @@
 
 use Backend;
 use System\Classes\PluginBase;
+use Rainlab\user\Models\User as UserModel;
+use Rainlab\user\Controllers\Users as UsersController;
+
 
 /**
  * WinShop Plugin Information File
  */
 class Plugin extends PluginBase
 {
+
+    public $require = ['Rainlab.User'];
     /**
      * Returns information about this plugin.
      *
@@ -40,6 +45,16 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+
+        UsersController::extendFormFields(function($form, $model, $context){
+            $form->addTabFields([
+                'address' => [
+                    'label' => 'jsy.winshop::lang.users.address',
+                    'tab' => 'jsy.winshop::lang.users.address_tab',
+                    'type' => 'text'
+                ],
+            ]);
+        });
 
     }
 

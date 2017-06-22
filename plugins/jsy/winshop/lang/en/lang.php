@@ -13,7 +13,7 @@ return [
         'product' => 'Products',        
     ],
     'users' => [
-        'menu_label' => 'Users',
-        'all_users' => 'All Users',
+        'address_tab' => 'Address',        
+        'address' => 'Your Address',
     ],
 ];
