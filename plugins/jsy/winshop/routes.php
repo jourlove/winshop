@@ -5,8 +5,8 @@
  */
 App::before(function ($request) {
 
-    Route::any('/', function() {
-        return redirect( Config::get('cms.backendUri', 'admin') );
-    });
+    //Route::any('/', function() {
+    //    return redirect( Config::get('cms.backendUri', 'admin') );
+    //});
 
 });

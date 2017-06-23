@@ -84,8 +84,7 @@ return [
     |
     */
 
-    //'loadModules' => ['System', 'Backend', 'Cms'],
-    'loadModules' => ['System', 'Backend'],
+    'loadModules' => ['System', 'Backend', 'Cms'],
 
     /*
     |--------------------------------------------------------------------------
