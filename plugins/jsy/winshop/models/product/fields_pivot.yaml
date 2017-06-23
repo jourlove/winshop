@@ -1,0 +1,10 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    amount:
+        label: 数量
+        type: number
+        span: left
+        required: true

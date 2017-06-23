@@ -28,7 +28,10 @@ class Product extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'orders' => ['Jsy\WinShop\Models\Order','table' => 'jsy_winshop_order_product','pivot' => ['amount']],
+        'posts' => 'Jsy\WinShop\Models\Post',
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

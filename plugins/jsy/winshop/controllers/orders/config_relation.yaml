@@ -11,12 +11,14 @@ user:
         form: $/rainlab/user/models/user/fields.yaml
         recordsPerPage: 10
 
-product:
-    label: 商品一览
+products:
+    label: 商品
     view:
         list: $/jsy/winshop/models/product/columns.yaml
-        toolbarButtons: create|delete
+        toolbarButtons: add|delete
     manage:
-        form: $/jsy/winshop/models/product/fields.yaml
+        form: $/jsy/winshop/models/product/columns.yaml
         recordsPerPage: 10
+    pivot:
+        form: $/jsy/winshop/models/product/fields_pivot.yaml        
         

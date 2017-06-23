@@ -8,6 +8,12 @@ fields:
         type: number
         span: left
         required: true
+    jan@update:
+        label: JAN
+        type: number
+        span: left
+        required: true
+        readOnly: true        
     name:
         label: 商品名称
         type: text

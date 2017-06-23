@@ -30,10 +30,10 @@ class Order extends Model
     public $hasMany = [];
     public $belongsTo = [
         'user' => 'Rainlab\User\Models\User',
-        'product' => 'Jsy\WinShop\Models\Product'
-
     ];
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'products' => ['Jsy\WinShop\Models\Product','table' => 'jsy_winshop_order_product','pivot' => ['amount']],
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
