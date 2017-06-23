@@ -27,15 +27,5 @@ fields:
         span: right
         required: true
     products:
-        type: repeater
-        prompt: 添加商品
-        form:
-            fields:
-                product_JAN:
-                    label: 商品JAN
-                    type: text
-                    span: left        
-                amount:
-                    label: 数量
-                    type: text
-                    span: right    
+        type: partial
+        path: $/jsy/winshop/controllers/orders/_product_pivot.htm   

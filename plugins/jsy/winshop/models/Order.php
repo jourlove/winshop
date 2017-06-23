@@ -11,7 +11,7 @@ class Order extends Model
      * @var string The database table used by the model.
      */
     public $table = 'jsy_winshop_orders';
-    protected $jsonable = ['products']; 
+    //protected $jsonable = ['products']; 
 
     /**
      * @var array Guarded fields

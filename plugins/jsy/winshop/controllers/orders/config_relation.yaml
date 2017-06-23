@@ -2,23 +2,28 @@
 #  Relation Behavior Config
 # ===================================
 
-user:
-    label: 用户一览
-    view:
-        list: $/rainlab/user/models/user/columns.yaml
-        toolbarButtons: create|delete
-    manage:
-        form: $/rainlab/user/models/user/fields.yaml
-        recordsPerPage: 10
 
 products:
     label: 商品
     view:
         list: $/jsy/winshop/models/product/columns.yaml
+        #    columns:
+        #        name:
+        ##            label: Name
+        #            searchable: true
+        #        pivot[amount]:
+        #            label: 数量
+        #            searchable: true
         toolbarButtons: add|delete
     manage:
         form: $/jsy/winshop/models/product/columns.yaml
         recordsPerPage: 10
-    pivot:
-        form: $/jsy/winshop/models/product/fields_pivot.yaml        
+    #pivot:
+    #    form:
+    #        fields:
+    #            pivot[amount]:
+    #                label: 数量
+    #                type: number
+    #                required: true
+    #                deferredBinding: true
         
