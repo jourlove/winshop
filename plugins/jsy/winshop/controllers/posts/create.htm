@@ -42,10 +42,21 @@
                 $(window).keydown(function(event){
                     if(event.keyCode == 13) {
                         event.preventDefault();
-                        $.request('formProducts::onAddItem');                        
+                        $('#Form-field-Post-products-group a[data-request="formProducts::onAddItem"]').click();                      
                         return false;
                     }
                 });
+                
+                $('#Form-field-Post-products-group a[data-request="formProducts::onAddItem"]').click(
+                    function() {
+                        setTimeout(function() {
+                            index = parseInt($('input[name="___index_products[]"]').last().val());
+                            id = 'Form-formProductsForm' + index + '-field-Post-products-' + index + '-product_JAN';
+                            $('#' + id).focus();
+                        },1000);
+                    }
+                );
+
             });
         </script>
     <?= Form::close() ?>

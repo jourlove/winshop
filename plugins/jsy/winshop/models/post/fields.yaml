@@ -3,6 +3,29 @@
 # ===================================
 
 fields:
+    code:
+        label: 快递单号
+        type: text
+        span: left
+        required: true
+    posttype:
+        label: 运输方法
+        type: balloon-selector
+        span: right
+        options:
+            hk: 航空
+            sal: SAL
+            cy: 船运
+    total_weight:
+        label: 总重量
+        type: number
+        span: left
+        required: true
+    total_price:
+        label: 总价格
+        type: number
+        span: right
+        required: true
     products:
         type: repeater
         prompt: 添加商品
@@ -21,18 +44,3 @@ fields:
                         published: 2
                         archived: 3
 
-    code:
-        label: 快递单号
-        type: text
-        span: left
-        required: true
-    total_weight:
-        label: 总重量
-        type: number
-        span: left
-        required: true
-    total_price:
-        label: 总价格
-        type: number
-        span: right
-        required: true
