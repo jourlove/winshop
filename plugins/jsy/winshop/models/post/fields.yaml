@@ -3,6 +3,24 @@
 # ===================================
 
 fields:
+    products:
+        type: repeater
+        prompt: 添加商品
+        form:
+            fields:
+                product_JAN:
+                    label: 商品JAN
+                    type: text
+                    span: left        
+                amount:
+                    label: 数量
+                    type: dropdown
+                    span: right 
+                    options:
+                        draft: 1
+                        published: 2
+                        archived: 3
+
     code:
         label: 快递单号
         type: text
@@ -18,17 +36,3 @@ fields:
         type: number
         span: right
         required: true
-    products:
-        type: repeater
-        prompt: 添加商品
-        form:
-            fields:
-                product_JAN:
-                    label: 商品JAN
-                    type: text
-                    span: left        
-                amount:
-                    label: 数量
-                    type: text
-                    span: right
-
