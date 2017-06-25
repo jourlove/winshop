@@ -1,4 +1,0 @@
-title: 'offline.snipcartshop::lang.plugin.common.categories'
-modelClass: OFFLINE\SnipcartShop\Models\Category
-toolbar:
-    buttons: reorder_toolbar

@@ -95,6 +95,7 @@ class Plugin extends PluginBase
     {
 
         return [
+            /*
             'order' => [
                 'label'       => 'jsy.winshop::lang.plugin.order',
                 'url'         => Backend::url('jsy/winshop/orders'),
@@ -115,7 +116,7 @@ class Plugin extends PluginBase
                     ]
                 ]
 
-            ],
+            ],*/
             'post' => [
                 'label'       => 'jsy.winshop::lang.plugin.post',
                 'url'         => Backend::url('jsy/winshop/posts'),
