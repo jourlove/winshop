@@ -9,7 +9,7 @@ columns:
     code:
         label: 快递单号
         searchable: true
-    statys:
+    status:
         label: 状态
         searchable: true
     total_weight:

@@ -23,7 +23,7 @@ create:
 # Update page
 update:
     title: Edit Post
-    redirect: jsy/winshop/posts
+    redirect: jsy/winshop/posts/update/:id
     redirectClose: jsy/winshop/posts
 
 # Preview page

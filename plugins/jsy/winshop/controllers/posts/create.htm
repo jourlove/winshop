@@ -37,47 +37,6 @@
                 </span>
             </div>
         </div>
-        <script>
-            $(document).ready(function() {
-                $(window).keydown(function(event){
-                    if(event.keyCode == 13) {
-                        event.preventDefault();
-                        $('#Form-field-Post-products-group a[data-request="formProducts::onAddItem"]').click();                      
-                        return false;
-                    }
-                });
-
-                $('#Form-field-Post-code').focus();
-                
-                $('#Form-field-Post-products-group a[data-request="formProducts::onAddItem"]').click(
-                    function() {
-
-                        setTimeout(function() {
-                            index = parseInt($('input[name="___index_products[]"]').last().val());
-                            id = 'Form-formProductsForm' + index + '-field-Post-products-' + index + '-product_JAN';
-                            $('#' + id).focus();
-                            $('#' + id)
-                                .focusin(function(e) {
-                                    $(this).css('background-color', '#ffc');
-                                })
-                                .focusout(function(e) {
-                                    $.request('onGetProductInfo', {
-                                            data: {jan: $(this).val()},
-                                            success: function(res) {
-                                                index = index - 1;
-                                                product_name_id = 'Form-formProductsForm' + index + '-field-Post-products-' + index + '-product_name';
-                                                $('#' + product_name_id).val(res.Name);
-                                                product_price_id = 'Form-formProductsForm' + index + '-field-Post-products-' + index + '-product_price';
-                                                $('#' + product_price_id).val(res.Price);                                            }
-                                        }
-                                    )
-                                });                            
-                        },1000);
-                    }
-                );
-
-            });
-        </script>
     <?= Form::close() ?>
 
 <?php else: ?>

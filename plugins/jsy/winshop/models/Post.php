@@ -35,8 +35,36 @@ class Post extends Model
     public $attachOne = [];
     public $attachMany = [];
 
-    public function beforeCreate()
+    public function beforeSave()
     {
-        $this->products = "{'JAN'=>'1','amount'=>1}";
+        $products_re = array();
+        foreach($this->products as $product)
+        {
+            if (count($products_re))
+            {
+                foreach($products_re as $key => $prod)
+                {
+                    if ($product['product_JAN'] == $prod['product_JAN']) {
+                        $products_re[$key]['product_amount'] = $prod['product_amount'] + $product['product_amount'];
+                    }
+                }
+            }
+            else
+            {
+                array_push($products_re,$product);
+            }
+        }
+        $this->products = $products_re;
+    }
+
+    public function getProductAmountOptions()
+    {
+        $ret = array();
+        for($i=1; $i<100; $i++)
+        {
+            //array_push($ret,[$i,$i]);
+            $ret[$i] = $i;
+        }
+        return $ret;
     }
 }

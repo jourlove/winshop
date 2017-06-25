@@ -22,6 +22,7 @@ class Posts extends Controller
     {
         parent::__construct();
         $this->addCss('/plugins/jsy/winshop/assets/css/winshop.css');
+        $this->addJs('/plugins/jsy/winshop/assets/js/winshop.js');        
         BackendMenu::setContext('Jsy.WinShop', 'post', 'post_list');
     }
 
@@ -29,21 +30,23 @@ class Posts extends Controller
     {
         $v = Validator::make(input(), array(
             'jan' => 'required|numeric',
+            'idtemp' => 'required'
         ));
 
         if ($v->fails()) {
-            return ['Name' => "", 'Price' => ""];
+            return ['Name' => "", 'Price' => "", 'IdTemp' => ""];
         }
 
         $product = Product::where('jan', input('jan'))->first();
+        list($IdTemp,) = explode('_',input('idtemp'));
 
         if ($product)
         {
-            return ['Name' => $product->name, 'Price' => $product->price];
+            return ['Name' => $product->name, 'Price' => $product->price, 'IdTemp' => $IdTemp];
         } 
         else
         {
-            return ['Name' => "", 'Price' => ""];
+            return ['Name' => "", 'Price' => "", 'IdTemp' => $IdTemp];
         }
     } 
     

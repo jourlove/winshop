@@ -3,11 +3,15 @@
 # ===================================
 
 fields:
-    code:
+    code@create:
         label: 快递单号
         type: text
         required: true
-        cssClass: onEnter
+    code@update:
+        label: 快递单号
+        type: text
+        required: true
+        readOnly: true
     products:
         type: repeater
         prompt: 添加商品
@@ -28,12 +32,7 @@ fields:
                 product_amount:
                     label: 数量
                     type: dropdown
-                    span: l4 
-                    options:
-                        draft: 1
-                        published: 2
-                        archived: 3
-
+                    span: l4
     total_weight:
         label: 总重量
         type: number
@@ -57,6 +56,6 @@ fields:
         type: balloon-selector
         span: right
         options:
-            hk: 日本发货完毕
-            sal: 运送中
-            cy: 接收完毕
+            A: 日本发货完毕
+            B: 运送中
+            C: 接收完毕
