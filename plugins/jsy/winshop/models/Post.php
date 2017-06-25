@@ -40,13 +40,26 @@ class Post extends Model
         $products_re = array();
         foreach($this->products as $product)
         {
+            if (empty($product['product_JAN']))
+            {
+                continue;
+            }
             if (count($products_re))
             {
+                $i = 0;
+                $len = count($products_re);
                 foreach($products_re as $key => $prod)
                 {
                     if ($product['product_JAN'] == $prod['product_JAN']) {
                         $products_re[$key]['product_amount'] = $prod['product_amount'] + $product['product_amount'];
                     }
+                    else
+                    {
+                        if ($i == $len - 1) {
+                            array_push($products_re,$product);
+                        }
+                    }
+                    $i++;
                 }
             }
             else
@@ -54,6 +67,8 @@ class Post extends Model
                 array_push($products_re,$product);
             }
         }
+        trace_log($this->products);
+        trace_log($products_re);
         $this->products = $products_re;
     }
 
