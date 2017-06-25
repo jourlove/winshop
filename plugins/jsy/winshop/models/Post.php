@@ -34,4 +34,9 @@ class Post extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function beforeCreate()
+    {
+        $this->products = "{'JAN'=>'1','amount'=>1}";
+    }
 }

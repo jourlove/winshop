@@ -12,6 +12,7 @@ class CreatePostsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('code');
+            $table->string('posttype');
             $table->integer('status');
             $table->float('total_weight');
             $table->float('total_price');

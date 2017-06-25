@@ -6,16 +6,34 @@ fields:
     code:
         label: 快递单号
         type: text
-        span: left
         required: true
-    posttype:
-        label: 运输方法
-        type: balloon-selector
-        span: right
-        options:
-            hk: 航空
-            sal: SAL
-            cy: 船运
+        cssClass: onEnter
+    products:
+        type: repeater
+        prompt: 添加商品
+        form:
+            fields:
+                product_JAN:
+                    label: 商品JAN
+                    type: text
+                    span: l4        
+                product_name:
+                    label: 商品名
+                    type: text
+                    span: l4        
+                product_price:
+                    label: 商品价格
+                    type: number
+                    span: l4
+                product_amount:
+                    label: 数量
+                    type: dropdown
+                    span: l4 
+                    options:
+                        draft: 1
+                        published: 2
+                        archived: 3
+
     total_weight:
         label: 总重量
         type: number
@@ -26,21 +44,19 @@ fields:
         type: number
         span: right
         required: true
-    products:
-        type: repeater
-        prompt: 添加商品
-        form:
-            fields:
-                product_JAN:
-                    label: 商品JAN
-                    type: text
-                    span: left        
-                amount:
-                    label: 数量
-                    type: dropdown
-                    span: right 
-                    options:
-                        draft: 1
-                        published: 2
-                        archived: 3
-
+    posttype:
+        label: 运输方法
+        type: balloon-selector
+        span: left
+        options:
+            hk: 航空
+            sal: SAL
+            cy: 船运
+    status:
+        label: 状态
+        type: balloon-selector
+        span: right
+        options:
+            hk: 日本发货完毕
+            sal: 运送中
+            cy: 接收完毕
