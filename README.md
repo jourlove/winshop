@@ -43,4 +43,8 @@ php artisan october:install #在这里设置数据库,后台管理密码等
 php artisan october:up #安装插件等
 ```
 
+7.open site url
+
+http：//localhost/winshop
+
 
