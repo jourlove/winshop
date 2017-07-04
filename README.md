@@ -26,7 +26,7 @@ php -r "unlink('composer-setup.php');"
 
 5.导入项目
 
-假设开发目录为c:\workspace
+项目目录为c:\xampp\htdocs\
 ```shell
 git clone https://github.com/jiangsongyi0204/winshop.git
 cd winshop
@@ -34,7 +34,7 @@ cd winshop
 
 6.初始化项目
 
-项目目录为c:\workspace\winshop
+项目目录为c:\xampp\htdocs\winshop
 ```shell
 composer install
 php artisan cache:clear
